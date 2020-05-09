@@ -6,4 +6,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: test
-      uses: instrumenta/kubeval-action@master
+      uses: adam-golab/kubeval-action@master
+      with:
+        ignored_filename_patterns: ^\.github
