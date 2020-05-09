@@ -8,4 +8,4 @@ jobs:
     - name: test
       uses: adam-golab/kubeval-action@master
       with:
-        ignored_filename_patterns: ^\.github
+        ignored_path_patterns: ^\.github
