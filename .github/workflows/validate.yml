@@ -1,0 +1,9 @@
+name: Validate YAML files
+on: [push, pull_request]
+jobs:
+  kubeval:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: test
+      uses: instrumenta/kubeval-action@master
