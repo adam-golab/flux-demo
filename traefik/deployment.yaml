@@ -39,6 +39,16 @@ spec:
               containerPort: 443
             - name: metrics
               containerPort: 9000
+          volumeMounts:
+            - name: config
+              mountPath: "/etc/traefik/config.yaml"
+              readOnly: true
+      volumes:
+        - name: config
+          secret:
+            secretName: traefik-config
+            items:
+            - key: config.yaml
 ---
 apiVersion: v1
 kind: Service
