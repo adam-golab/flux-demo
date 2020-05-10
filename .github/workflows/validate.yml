@@ -9,4 +9,3 @@ jobs:
       uses: adam-golab/kubeval-action@my-image
       with:
         ignored_path_patterns: ^\.github
-        strict: false
