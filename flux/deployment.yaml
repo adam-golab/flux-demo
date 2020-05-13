@@ -1,3 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: flux
 ---
 # The service account, cluster roles, and cluster role binding are
 # only needed for Kubernetes with role-based access control (RBAC).
