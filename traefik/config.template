@@ -1,0 +1,28 @@
+api:
+  insecure: true
+accessLog: {}
+entryPoints:
+  web:
+    address: :80
+  websecure:
+    address: :443
+  metrics:
+    address: :9000
+providers:
+  kubernetesCRD: {}
+certificatesResolvers:
+  letsencrypt:
+    acme:
+      tlsChallenge: {}
+      email: <YOUR EMAIL ADDRESS>
+      storage: /etc/acme/acme.json
+      httpChallenge:
+        entryPoint: web
+metrics:
+  prometheus:
+    buckets:
+      - 0.1
+      - 0.3
+      - 1.2
+      - 5.0
+    entryPoint: metrics
